@@ -1,0 +1,33 @@
+/* nav */
+header {
+    background-color: black;
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding: 0;
+
+}
+
+nav ul li {
+  color: #FFFFFF;
+  margin: 1em;
+  font-family: Arial;
+  font-size: 1.2em;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+/* eind nav*/
+
+/* banner */
+
+.banner {
+    margin: 0;
+    width: 100%;
+
+}
