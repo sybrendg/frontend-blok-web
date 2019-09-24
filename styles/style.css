@@ -9,25 +9,63 @@ nav ul {
     list-style-type: none;
     justify-content: flex-end;
     padding: 0;
-
 }
 
 nav ul li {
-  color: #FFFFFF;
-  margin: 1em;
-  font-family: Arial;
-  font-size: 1.2em;
+    font-size: 1.2em;
+    margin: 1em;
 }
 
+a {
+    color: #ff9846;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fb4871;
+    text-decoration: underline overline;
+    text-decoration-color: #fb4871;
+}
 nav ul li:first-child {
-  margin-right: auto;
+    margin-right: auto;
+}
+
+nav ul li:last-child {
+    margin-right: 6em;
+}
+
+.logo {
+    float: left;
+    height: 50px;
+    width: 50px;
 }
 /* eind nav*/
 
-/* banner */
+/* section banner */
 
-.banner {
+section#impression {
+    background-image: url("img/zeezout.jpg");
+    color: #fb4871;
+    font-family: sans-serif;
+    font-style: italic;
     margin: 0;
-    width: 100%;
-
+    background-size: cover;
+    height:50vh;
+    /background-color: pink;
 }
+
+section#impression h1 {
+    color: white;
+    margin: 0;
+}
+
+section#impression h2 {
+    color: white;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* einde section banner */
