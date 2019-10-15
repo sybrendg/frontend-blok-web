@@ -1,5 +1,10 @@
 /* nav */
-header {
+
+body {
+    margin:0;
+}
+
+body > header {
     background-color: black;
 }
 
@@ -7,8 +12,9 @@ nav ul {
     align-items: center;
     display: flex;
     list-style-type: none;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -48,24 +54,150 @@ nav ul li:last-child {
 
 section#impression {
     background-image: url("img/zeezout.jpg");
+    background-size: cover;
     color: #fb4871;
+    display: flex;
+    flex-direction:column;
     font-family: sans-serif;
     font-style: italic;
-    margin: 0;
-    background-size: cover;
     height:50vh;
-    /background-color: pink;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1em;
+    background-position: bottom;
 }
 
 section#impression h1 {
-    color: white;
-    margin: 0;
+    color: #ff9846;
+    margin-bottom: 0;
+    padding-left: 1em;
 }
 
-section#impression h2 {
-    color: white;
+section#impression time {
+    color: #fb4871;
     font-size: 1.2em;
+    font-weight: bold;
     margin: 0;
+    padding-top: 0;
 }
 
 /* einde section banner */
+
+/* begin articles */
+
+article {
+    background: black;
+    margin: 1em;
+    height: calc(100vw - 2em);
+    width: calc(100vw - 2em);
+}
+
+img {
+    position: absolute;
+    max-width: calc(100vw - 2em);
+    max-height:
+}
+
+
+h2 {
+    color: #ff9846;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h3 {
+    color: #ff9846;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+    margin-bottom: 0;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+time {
+    color: #fb4871;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+p {
+    color: white;
+    font-family:sans-serif;
+    font-size: 0.8em;
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+article button {
+    color: #fb4871;
+    font-family: sans-serif;
+    margin-bottom: 0.8em;
+    margin-left: 1em;
+}
+
+form {
+    background-color: #fb4871;
+    margin: 1em;
+    max-width: calc(100em - 2em);
+}
+
+legend{
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+label {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.social {
+    background-color: #ff9846;
+    list-style-type: none;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer img {
+    margin: 1em;
+    max-height: 10%;
+    max-width: 10%;
+
+/* einde articles */
+
+@media (min-width:50em) {
+    nav ul {
+        padding-right:6em;
+    }
+}
