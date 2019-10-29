@@ -18,7 +18,7 @@ nav ul {
 }
 
 nav ul li {
-    font-size: 1.2em;
+    font-size: 1.em;
     margin: 1em;
 }
 
@@ -30,7 +30,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
     color: #fb4871;
     text-decoration: underline overline;
     text-decoration-color: #fb4871;
@@ -40,10 +40,10 @@ nav ul li:first-child {
 }
 
 nav ul li:last-child {
-    margin-right: 6em;
+    margin-right: 2em;
 }
 
-.logo {
+header img {
     float: left;
     height: 50px;
     width: 50px;
@@ -86,16 +86,35 @@ section#impression time {
 /* begin articles */
 
 article {
-    background: black;
-    margin: 1em;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
     height: calc(100vw - 2em);
+    justify-content: flex-end;
+    margin: 1em;
+    position: relative;
     width: calc(100vw - 2em);
 }
 
-img {
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     position: absolute;
-    max-width: calc(100vw - 2em);
-    max-height:
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+article header {
+    background: rgba(0, 0, 0, 0.75);
+}
+article p {
+    background: rgba(0, 0, 0, 0.75);
+    margin: 0;
+    padding: 2em 1em;
+}
+article footer {
+    background: rgba(0, 0, 0, 0.75);
 }
 
 
@@ -150,6 +169,10 @@ article button {
     margin-left: 1em;
 }
 
+/* einde articles */
+
+/* begin aanmelden pre-sale */
+
 form {
     background-color: #fb4871;
     margin: 1em;
@@ -168,6 +191,11 @@ legend{
     text-align: center;
 }
 
+fieldset {
+    border: none;
+    align-content: center;
+}
+
 label {
     color: white;
     font-family: sans-serif;
@@ -179,25 +207,147 @@ label {
     padding-top: 1em;
 }
 
+form button {
+    color: black;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0.2em;
+}
+
+
+
+/* einde aanmelden pre-sale */
+
+/* begin footer */
+
 .social {
     background-color: #ff9846;
     list-style-type: none;
+
 }
 
 footer ul {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 0;
 }
+
 footer img {
     margin: 1em;
-    max-height: 10%;
-    max-width: 10%;
+    height:2em;
+    width:2em;
+}
 
-/* einde articles */
+/* einde footer */
+
+/* detail pagina */
+
+article#impressionartist1 {
+    background-image: URL(img/AXEFIELD.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+}
+/* Bron img: https://ripple-artists.com/artists/axefield/ */
+
+article#impressionartist1 h3 {
+    margin-bottom: 1em;
+}
+
+article#impressionartist2 {
+    background-image: URL(img/bennyrodrigues.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+}
+/* Bron img: https://indebuurt.nl/denbosch/doen/kings-of-colors-festival-open-monumentendag-dit-is-er-te-doen-in-den-bosch~8901/ */
+
+article#impressionartist2 h3 {
+    margin-bottom: 1em;
+}
+
+article#impressionartist3 {
+    background-image: URL(img/blithesomesprouts.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 25vh;
+}
+/* Bron img: https://www.facebook.com/blithesomesprouts/photos/a.105764680851866/105769670851367/?type=1&theater */
+
+article#impressionartist3 h3 {
+    margin-bottom: 1em;
+}
+
+article#impressionartist4 {
+    background-image: URL(img/Cinnaman.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 25vh;
+}
+/* Bron img: https://dancevalley.com/line-up/cinnaman */
+
+article#impressionartist4 h3 {
+    margin-bottom: 1em;
+}
+
+article#impressionartist5 {
+    background-image: URL(img/Davy-Brandts.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+}
+/* Bron img: https://partyflock.nl/artist/34182:Davy-Brandts */
+
+article#impressionartist5 h3 {
+    margin-bottom: 1em;
+}
+
+article#impressionartist6 {
+    background-image: URL(img/superstrings.png);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+}
+/* Bron img: https://www.facebook.com/superstringsthejourney/?utm_source=partyflock&utm_medium=link */
+
+article#impressionartist6 h3 {
+    margin-bottom: 1em;
+}
+
+
 
 @media (min-width:50em) {
-    nav ul {
-        padding-right:6em;
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    main h2 {
+        grid-column: 1/3
+    }
+    main article {
+        width:auto;
+        height:50vh;
+    }
+
+}
+
+@media (min-width:70em) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main h2 {
+        grid-column: 1/4
+    }
+    main article:first-of-type {
+        grid-column: 1/3
+    }
+    main article:last-of-type {
+        grid-column: 2/4
     }
 }
+
+
