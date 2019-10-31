@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
         messages.push('Name is required')
     }
 
-    if (messages.length >0){
+    if (messages.length > 0){
         e.preventDefault()
         errorElement.innerText = messages.join(', ')
     }
