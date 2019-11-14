@@ -1,16 +1,10 @@
-const name = document.getElementById('email')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
+var like = document.querySelector('.like-btn');
 
-form.addEventListener('submit', (e) => {
-    let messages = []
-    if(name.value === '' || name.value == null) {
-        messages.push('Name is required')
-    }
+like.addEventListener('click', function(){
+    var menu_item = document.querySelector('.nav-events');
 
-    if (messages.length > 0){
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    }
+    menu_item.classList.add("active");
+
+
 
 })

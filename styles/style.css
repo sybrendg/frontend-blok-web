@@ -48,6 +48,23 @@ header img {
     height: 50px;
     width: 50px;
 }
+
+.nav-events {
+    position: relative;
+}
+.nav-events.active:after {
+    border-radius: 50%;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #fb4871;
+    display: block;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+}
+
+
 /* eind nav*/
 
 /* section banner */
@@ -110,9 +127,12 @@ article header {
 }
 article p {
     background: rgba(0, 0, 0, 0.75);
+    font-family: sans-serif;
+    font-weight: bold;
     margin: 0;
     padding: 2em 1em;
 }
+
 article footer {
     background: rgba(0, 0, 0, 0.75);
 }
@@ -149,12 +169,13 @@ time {
     padding-top: 1em;
 }
 
-p {
+article p {
     color: white;
     font-family:sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 1em;
     padding-top: 0.5em;
+    padding-bottom: 0;
 }
 
 .container {
@@ -163,10 +184,18 @@ p {
 }
 
 article button {
-    color: #fb4871;
+    background-color: #fb4871;
+    border: none;
+    color: white;
+    float: right;
     font-family: sans-serif;
-    margin-bottom: 0.8em;
-    margin-left: 1em;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+    margin: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
 }
 
 /* einde articles */
@@ -177,9 +206,10 @@ form {
     background-color: #fb4871;
     margin: 1em;
     max-width: calc(100em - 2em);
+    padding-bottom: 1em;
 }
 
-legend{
+form legend{
     color: black;
     font-family: sans-serif;
     font-weight: bold;
@@ -191,28 +221,42 @@ legend{
     text-align: center;
 }
 
-fieldset {
+form fieldset {
     border: none;
     text-align: center;
 }
 
-label {
+form label {
     color: white;
     font-family: sans-serif;
     font-size: 1.2em;
     font-style: italic;
     font-weight: bold;
     font-size: 0.9em;
-    padding-left: 1em;
-    padding-top: 1em;
+    /* float: left;
+    text-align: right;
+    margin-right: 15px;
+    width: 100px; */
 }
 
 form button {
-    color: black;
+    border: none;
+    color: #fb4871;
     font-family: sans-serif;
     font-style: italic;
     font-weight: bold;
-    padding: 0.2em;
+    padding: 0.5em;
+}
+
+form input {
+    border: 0;
+    padding: 0.5em;
+    padding-right: 2em;
+    font-weight: bold;
+  }
+
+form textarea:focus, input:focus {
+    border: 2px solid #ff9846;
 }
 
 
@@ -332,6 +376,19 @@ article#impressionartist6 h3 {
         height:50vh;
     }
 
+    article p {
+        padding-right: 3em;
+    }
+
+    form label {
+        margin-right: 1em;
+        margin-left: 3em;
+    }
+
+    form input {
+    padding-right: 5em;
+    }
+
 }
 
 @media (min-width:70em) {
@@ -348,6 +405,21 @@ article#impressionartist6 h3 {
     main article:last-of-type {
         grid-column: 2/4
     }
+
+    article p {
+        padding-right: 5em;
+    }
+
+    article#impressionartist1 {
+    background-position: top;
+    }
+
+    form input {
+    padding-right: 7em;
+    }
+
 }
+
+
 
 
